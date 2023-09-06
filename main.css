@@ -1,0 +1,305 @@
+:root {
+    /* Colors */
+    --color-primary: #82550c;  /* Brown for main text */
+    --color-secondary: #9a9796;  /* Gray for sidebar */
+    --color-accent: #8cc345;  /* Brown for links hover and Green for section separators */
+    --hover-color: #ae630d;
+
+
+
+    /* Spacing */
+    --base-spacing: 1.5rem;
+    /* Main spacing for elements */
+    --section-spacing: 2rem;
+    /* Space between sections */
+    --sidebar-spacing: 1.4rem;
+    /* Padding around sidebar content */
+
+    /* Fonts */
+    --font-primary: 'Outfit', sans-serif;
+    /* Main font */
+    --font-secondary: 'Roboto', sans-serif;
+    /* Secondary font (not used in this CSS) */
+    --base-font-size: 1.2rem;
+    /* Base font size for body text */
+    --h1-font-size: 2rem;
+    /* Font size for main headings */
+    --h2-font-size: 1.75rem;
+    /* Font size for sub-headings */
+    --h3-font-size: 1.2rem;
+    /* Font size for sub-sub-headings */
+    --h4-font-size: 1.0rem;
+    /* Font size for the smallest headings */
+
+    /* Other */
+    --base-line-height: 1.5;
+    /* Base line height for text */
+    --section-separator: 1.5px solid var(--color-accent);
+    /* Line to separate sections */
+    --icon-font-size: 2rem;
+    /* Size of the font icons */
+    --transition-speed: 0.3s;
+    /* Transition speed for link hover effects */
+
+    /* Link hover color */
+}
+
+/* Global styles for HTML and body elements, including a reset for default browser styles */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+
+body {
+    background: url('../images/Everyman Archetype.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-primary);
+    /* Main text color */
+    font-size: var(--base-font-size);
+    /* Base font size */
+    line-height: var(--base-line-height);
+    /* Base line height */
+}
+
+.container {
+    display: flex;
+    /* Apply Flexbox layout */
+    flex-direction: row-reverse;
+    /* Reverse the natural order of elements */
+    max-width: 80vw;
+    /* Maximum width of the container */
+    margin: 2rem auto;
+    /* Centrally align the container horizontally */
+    padding: 0;
+    background-color: white;
+    /* Background color of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    /* Add shadow around the container */
+    border-radius: 5px;
+    /* Add rounded corners to the container */
+    overflow: hidden;
+    /* Hide any content that goes outside the container */
+}
+
+.sidebar {
+    flex: 1;
+    /* Take up 1 fraction of the available space */
+    display: flex;
+    /* Apply Flexbox layout */
+    flex-direction: column;
+    /* Stack the children vertically */
+    justify-content: space-between;
+    /* Distribute space evenly between the children */
+    padding: var(--sidebar-spacing);
+    /* Add padding around the sidebar content */
+    background-color: var(--color-secondary);
+    /* Background color of the sidebar */
+    color: white;
+    /* Text color in the sidebar */
+}
+
+.sidebar .portrait img {
+    margin-top: 15%;
+    border-radius: 45%;
+    /* Make the image Oval */
+    object-fit: cover;
+    /* Scale the image to cover its content box, could distort the image */
+    width: 100%;
+    /* Full width of the parent */
+    height: auto;
+   
+}
+
+.links {
+    display: flex;
+    /* Apply Flexbox layout */
+    justify-content: space-between;
+    /* Distribute space evenly between the children */
+    padding: 0.8rem;
+    /* Add padding around the links */
+}
+
+.links a {
+    color: inherit;
+    /* Use the parent's text color */
+    font-size: var(--icon-font-size);
+    /* Icon size */
+    text-decoration: none;
+    /* Remove the underline from links */
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    /* Add transition effects for link hover */
+}
+
+.links a:hover {
+    color: var(--hover-color);
+    /* Change text color on hover */
+    transform: scale(1.1);
+    /* Enlarge the link on hover */
+}
+
+.main-content {
+    flex: 3;
+    /* Take up 3 fractions of the available space */
+    padding: var(--section-spacing);
+    /* Add padding around the main content */
+}
+
+.main-content section,
+.main-content header {
+    margin-bottom: var(--section-spacing);
+    /* Add space below each section */
+    padding-bottom: var(--section-spacing);
+    /* Add padding at the bottom of each section */
+    border-bottom: var(--section-separator);
+    /* Add a line below each section */
+}
+
+.main-content section:last-child {
+    margin-bottom: 0;
+    /* Remove the bottom margin from the last section */
+    border-bottom: none;
+    /* Remove the line from the last section */
+}
+
+.skill-list {
+    display: grid;
+    /* Apply Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Create as many columns as fit into the container */
+    gap: calc(.5 * var(--base-spacing));
+    /* Add space between grid items */
+    margin-bottom: 1rem;
+    /* Add space below the list */
+}
+
+.skill-list li {
+    display: flex;
+    /* Apply Flexbox layout */
+    align-items: center;
+    /* Center children vertically */
+}
+
+.fa-skill-icon {
+    margin-right: var(--base-spacing);
+    /* Add space to the right of the icon */
+    font-size: var(--icon-font-size);
+    /* Icon size */
+}
+
+/* Responsive design: apply different styles when the viewport width is 768px or less */
+
+@media (max-width: 768px) {
+    body {
+        background: none;
+        /* Remove background image */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Stack children vertically */
+        margin: 0 auto;
+        /* Centrally align the container horizontally */
+        padding: 0;
+        /* Remove padding */
+        width: 100%;
+        /* Full width of the viewport */
+    }
+
+    .sidebar {
+        order: -1;
+        /* Move the sidebar below the main content */
+        height: 100vh;
+        /* Full height of the viewport */
+        overflow-y: auto;
+        /* Enable scrolling if content overflows vertically */
+    }
+
+    .main-content {
+        padding-top: 1rem;
+        /* Add padding at the top of the main content */
+    }
+}
+
+
+@media print {
+    :root {
+        --base-font-size: 12pt;
+    }
+
+    /* Reset */
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Arial", serif;
+        color: #333;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0.1rem;
+    }
+
+    .sidebar,
+    .main-content,
+    p {
+        padding: 0.2rem;
+    }
+
+    .sidebar {
+        order: -1;
+        height: auto;
+    }
+
+    .main-content {
+        padding-top: 0.2rem;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 0.2rem;
+    }
+
+    .skill-list {
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        gap: calc(.5 * var(--base-spacing));
+    }
+
+    .links,
+    h1,
+    .portrait {
+        display: none;
+    }
+
+    .main-content section,
+    .main-content header {
+        margin-bottom: calc(.8 * var(--section-spacing));
+        padding-bottom: calc(.8 *var(--section-spacing));
+        border-bottom: calc(.8 *var(--section-separator));
+    }
+
+}
