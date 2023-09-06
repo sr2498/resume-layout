@@ -22,3 +22,7 @@ To use this code for your own resume or portfolio website:
    ```bash
    git clone https://github.com/your-username/your-resume.git
    cd your-resume
+
+## Screenshot
+
+![Screen Shot 2023-09-06 at 11 59 13 AM](https://github.com/sr2498/resume-layout/assets/134464080/a064a8d2-f3c9-485c-bc40-6fdd906033ab)
