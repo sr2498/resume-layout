@@ -1,10 +1,10 @@
 # Resume-layout using HTML and CSS
 
-This repository contains the HTML and CSS files for Sandhya Rani's resume website.
+This repository contains the HTML and CSS files for Sandhya Rani's resume website using Everyman brand archetype.
 
 ## Description
 
-Sandhya Rani's resume website is designed to showcase her skills, experience, education, and projects. It consists of an HTML file (`index.html`) and a CSS file (`main.css`) that together create a visually appealing and responsive web page.
+Sandhya Rani's resume website is designed to showcase her skills, experience, education, and projects. It consists of an HTML file (`index.html`) and a CSS file (`main.css`) that together create a visually appealing and responsive web page. The Background picture, colors and font of web page represents "Everyman brand archetype".
 
 ## File Structure
 
