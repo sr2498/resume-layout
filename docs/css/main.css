@@ -1,8 +1,8 @@
 :root {
     /* Colors */
-    --color-primary: #82550c;  /* Brown for main text */
-    --color-secondary: #9a9796;  /* Gray for sidebar */
-    --color-accent: #8cc345;  /* Brown for links hover and Green for section separators */
+    --color-primary: #734906;  /* Brown for main text */
+    --color-secondary: #969393;  /* Gray for sidebar */
+    --color-accent: #4b701aed;  /* Brown for links hover and Green for section separators */
     --hover-color: #ae630d;
 
 
@@ -81,22 +81,14 @@ body {
 
 .container {
     display: flex;
-    /* Apply Flexbox layout */
     flex-direction: row-reverse;
-    /* Reverse the natural order of elements */
     max-width: 80vw;
-    /* Maximum width of the container */
     margin: 2rem auto;
-    /* Centrally align the container horizontally */
     padding: 0;
     background-color: white;
-    /* Background color of the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    /* Add shadow around the container */
     border-radius: 5px;
-    /* Add rounded corners to the container */
     overflow: hidden;
-    /* Hide any content that goes outside the container */
 }
 
 .sidebar {
