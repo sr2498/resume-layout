@@ -25,5 +25,4 @@ To use this code for your own resume or portfolio website:
 
 ## Screenshot
 
-![Screen Shot 2023-09-06 at 12 11 45 PM](https://github.com/sr2498/resume-layout/assets/134464080/ff885a4c-c00e-4d17-9c1b-6b980ae796b8)
-
+![Screenshot](<Screen Shot 2024-06-06 at 5.50.11 AM.png>)
